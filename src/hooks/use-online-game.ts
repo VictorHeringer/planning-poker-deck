@@ -88,9 +88,7 @@ export default function useOnlineGame(
   decks: Deck[],
   playerName: string
 ) {
-  const [socket] = useState(
-    io(process.env.REACT_APP_HOST, { path: process.env.REACT_APP_HOST_SUB_DIR })
-  );
+  const [socket] = useState(io(process.env.REACT_APP_HOST));
 
   console.log({
     path: process.env.REACT_APP_HOST,
